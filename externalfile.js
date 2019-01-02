@@ -5,6 +5,7 @@
 
  var emp1Details = {empName:"Ankush Markad", empID:6030, basicSalary:45000};
  var emp2Details = {empName:"Bhushan Bhide", empID:5030, basicSalary:65000};
+ 
 
 function calTotalSalaryEmp1()
 {
@@ -13,6 +14,7 @@ function calTotalSalaryEmp1()
     basic12per = (emp1Details.basicSalary * 12 / 100);
     basicTds = (emp1Details.basicSalary * 2 / 100);
     totalSal = totalSal + emp1Details.basicSalary + basic12per + basicTds;
+    document.getElementById("empPid").innerHTML = totalSal;
 }
 
 function calTotalSalaryEmp2()
@@ -22,4 +24,24 @@ function calTotalSalaryEmp2()
     basic12per2 = (emp2Details.basicSalary * 12 / 100);
     basicTds2 = (emp2Details.basicSalary * 2 / 100);
     totalSal2 = totalSal2 + emp2Details.basicSalary + basic12per2 + basicTds2;
+    document.getElementById("empPid").innerHTML = totalSal2;
+}
+
+//3. Create Array: We can create Arrays in two ways-:
+
+// a) Using Literal 
+var empNames = ["Nikhil","Bhushan","Pooja"];
+// b) Using Constructor (new keyword)
+var empNames = new Array("Nikhil","Bhushan","Pooja");
+
+
+//4.Create Array of object(Object should be id property ) and loop through Array and find all ids. Use For Each loop
+
+var emp1Info = {empID:6030, empName:"Ankush Markad", basicSalary:45000};
+var emp2Info = {empID:5030, empName:"Nikhil Kalamkar", basicSalary:65000};
+var empInformation = [emp1Info, emp2Info];
+
+function empDetailsFunction(empData, empIndex)
+{  
+    document.getElementById("empDataid").innerHTML = document.getElementById("empDataid").innerHTML + empInformation.empID;
 }
